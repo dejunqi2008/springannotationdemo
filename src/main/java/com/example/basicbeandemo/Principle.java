@@ -1,4 +1,4 @@
-package com.example.beandemo;
+package com.example.basicbeandemo;
 
 public class Principle {
     private String name;
