@@ -10,10 +10,6 @@ public class BeanDemoConfig {
     @Value("${getPrinciple.name}")
     private String principleName;
 
-    @Value("$getCollege.principle")
-    private Principle principle;
-
-
     @Bean
     public Principle getPrinciple() {
         return new Principle(principleName);
@@ -21,6 +17,6 @@ public class BeanDemoConfig {
 
     @Bean
     public College getCollege() {
-        return new College(principle);
+        return new College();
     }
 }

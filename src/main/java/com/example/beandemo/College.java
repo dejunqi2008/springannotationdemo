@@ -1,18 +1,21 @@
 package com.example.beandemo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+
+@Component
 public class College {
     private Principle principle;
 
-    public College(Principle principle) {
+    @Autowired
+    public void setPrinciple(Principle principle) {
         this.principle = principle;
     }
 
     public Principle getPrinciple() {
         return principle;
-    }
-
-    public void setPrinciple(Principle principle) {
-        this.principle = principle;
     }
 
     public void testCollege() {
